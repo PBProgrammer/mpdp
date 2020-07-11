@@ -16,9 +16,9 @@ public class RestController {
 
 
     @GetMapping(path = {"/8B0AF486D660DD72259E978345B14ADD/pw/{password}"})
-    public ResponseEntity<Boolean> checkPassword(@PathVariable("password") String password) {
+    public ResponseEntity<String> checkPassword(@PathVariable("password") String password) {
         if(password.equals(Constants.pw)){
-            return ResponseEntity.ok(true);
+            return ResponseEntity.ok("77157215152362135262135");
         }else{
             return ResponseEntity.badRequest().build();
         }
